@@ -20,7 +20,7 @@ def chat_with_openai(question, results):
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",  # or "gpt-4o", "gpt-4", etc.
             messages=[
-                {"role": "system", "content": "you are a dictionary assistant that answers questions based on the provided search results. the language is ghomala, do not answer none sensical questions, only answer questions that are related to the search results provided., else tell the user that you cannot answer the question."},
+                {"role": "system", "content": "you are a dictionary assistant that answers questions based on the provided search results. the language is ghomala, do not answer none "},
                 {"role": "user", "content": f"Question: {question}\n\nSearch Results: {results}"}
             ],
             max_tokens=150,
@@ -156,7 +156,7 @@ def query():
         # Use the top result's text as the answer and relevant section
         # Alternatively, concatenate multiple results if needed
         top_result = results[0]
-        answer = chat_with_openai(query, results)
+        answer = top_result
         relevant_section = top_result['text']
 
 
