@@ -156,7 +156,7 @@ def query():
         # Use the top result's text as the answer and relevant section
         # Alternatively, concatenate multiple results if needed
         top_result = results[0]
-        answer = top_result
+        answer = top_result['text'] 
         relevant_section = top_result['text']
 
 
