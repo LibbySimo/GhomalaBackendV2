@@ -1,9 +1,11 @@
-   flask-cors
-   flask
-   langchain-chroma
-   langchain-core
-   langchain
-   langchain-openai
-   upstash-vector
-   langchain-community
-   pypdf
+flask-cors
+flask
+langchain-chroma
+langchain-core
+langchain
+langchain-openai
+upstash-vector
+langchain-community
+pypdf
+gunicorn
+python-dotenv
