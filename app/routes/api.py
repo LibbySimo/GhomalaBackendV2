@@ -20,7 +20,7 @@ def chat_with_openai(question, results):
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",  # or "gpt-4o", "gpt-4", etc.
             messages=[
-                {"role": "system", "content": "You are an AI assistant. a user is asking a question use the context from the vector search to answer him "},
+                {"role": "system", "content": "you are a dictionary assistant that answers questions based on the provided search results. the language is ghomala, do not answer none sensical questions, only answer questions that are related to the search results provided., else tell the user that you cannot answer the question."},
                 {"role": "user", "content": f"Question: {question}\n\nSearch Results: {results}"}
             ],
             max_tokens=150,
